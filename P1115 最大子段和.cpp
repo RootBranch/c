@@ -6,7 +6,7 @@ int main()
 {
 	int n;
 	cin >> n;
-	int ma=0;
+	int ma=-999999;
 	for (int i = 1; i <= n; i++)
 	{
 		cin >> a[i];
