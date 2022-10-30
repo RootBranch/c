@@ -1,25 +1,26 @@
 #include <iostream>
+#include <string>
+#include <string.h>
 using namespace std;
-void del(int arrar[], int n, int m)
+void s(string a,string b)
 {
-	for (int i = 0; i < n; i++)
+	int i = 0;
+	int fir = 0;
+	for (int i = 0; i < b.size(); i++)
 	{
-		if (arrar[i]==m)
-			for (int j = i; j < 10; j++)
-			{
-				arrar[j] = arrar[j + 1];
-			}
+		if (a[fir] == b[i]) fir++;
 	}
+	if (fir == a.size()) cout << "YES";
+	else cout << "NO";
 }
 int main()
 {
-	int a[100] = { 1,2,3,4,5,6,7,8,9,10 };
-	int n, m;
-	cin >> n >> m;
-	del(a, n, m);
-	for (int i = 0; i < 10; i++)
-	{
-		if (a[i] == 0) break;
-		cout << a[i]<<' ';
-	}
+	string a, b;
+	cin >> a >> b;
+	int sum1 = a.size();
+	int sum2 = b.size();
+	if (sum1 >= sum2) s(b, a);
+	if (sum2 > sum1) s(a, b);
+	return 0;
+	
 }
