@@ -72,14 +72,11 @@ int main()
 			if (s[i][j] == 'a') xr = i, yr = j;
 		}
 	}
-	int c=999;
 	for (int i = 1; i <= k; i++)
 	{
 		int d = bfs(x1[i], y2[i]);
-		if (d == minn) c = min(c, d);
 		minn = min(d, minn);
 	}
-	if (minn == c) cout << "Poor ANGEL has to stay in the prison all his life.";
 	if (minn == 99999) cout << "Poor ANGEL has to stay in the prison all his life.";
 	else cout << minn;
 	return 0;
